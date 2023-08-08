@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from './components/navbar'
 import Product from './components/product';
 import ShoppingCart from './components/shopping-cart';
 
@@ -23,17 +22,16 @@ class App extends Component {
             });
         }
             this.setState({items: currentItems});
-            console.log(this.state);
+            
         }
     
     render() { 
         return <React.Fragment>
-            <Navbar/>
             <div className='main-container'>
                  <div className='product-container'>
-                    <Product onAdd={() => this.addItem(1, 'Tomaten' , 2.99)}image="tomatoes.jpg" title="Tomaten" description="Füge Tomaten zu deinem Warenkorb hinzu"/>
-                    <Product onAdd={() => this.addItem(1, 'Gurken' , 1.99)} image="cucumbers.jpg" title="Gurken" description="Füge Gurken zu deinem Warenkorb hinzu"/>
-                    <Product onAdd={() => this.addItem(1, 'Äpfel' , 3.99)} image="apples.jpg" title="Äpfel"  description="Füge Äpfel zu deinem Warenkorb hinzu"/> 
+                    <Product onAdd={() => this.addItem(1, 'Tomaten' , 2.99)}image="Tomaten.jpg" title="Tomaten" description="Füge Tomaten zu deinem Warenkorb hinzu"/>
+                    <Product onAdd={() => this.addItem(1, 'Gurken' , 1.99)} image="Gurken.jpg" title="Gurken" description="Füge Gurken zu deinem Warenkorb hinzu"/>
+                    <Product onAdd={() => this.addItem(1, 'Äpfel' , 3.99)} image="Äpfel.jpg" title="Äpfel"  description="Füge Äpfel zu deinem Warenkorb hinzu"/> 
                     <Product onAdd={() => this.addItem(1, 'Birnen' , 4.99)} image="birne.jpg" title="Birnen" description="Füge Birnen zu deinem Warenkorb hinzu"/>
                  </div>
                <ShoppingCart items={this.state.items}/>
